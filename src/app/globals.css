@@ -1,0 +1,42 @@
+/* globals.css */
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-open: var(--font-open-sans);
+  --font-josefin: var(--font-josefin-sans);
+  --font-sans: var(--font-kumbh-sans);  /* Utiliser Kumbh Sans comme police principale */
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-kumbh-sans);  /* Utiliser explicitement Kumbh Sans */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: white;
+  font-family: var(--font-kumbh-sans);  /* Cohérent avec Kumbh Sans */
+}
+
+input {
+  color: black;
+}
